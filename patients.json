@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Monirul Islam",
+    "age": 25,
+    "gender": "male",
+    "is_diabetic": false
+  },
+  {
+    "id": 2,
+    "name": "Rahim Uddin",
+    "age": 40,
+    "gender": "male",
+    "is_diabetic": true
+  },
+  {
+    "id": 3,
+    "name": "Ayesha Akter",
+    "age": 30,
+    "gender": "female",
+    "is_diabetic": false
+  }
+]
