@@ -1,5 +1,7 @@
 from fastapi import FastAPI, Path, HTTPException
 import json
+from pydantic import BaseModel
+
 
 app = FastAPI()
 
@@ -31,4 +33,22 @@ def view(patient_id: int):
     raise HTTPException(status_code=404, detail= "Patient Not Exists")
     
     
-    
+class Patients(BaseModel):
+    name: str
+    age: int
+
+def insert(patient: Patients):
+    print(patient.name)
+    print(patient.age)
+    print("Inserted Successfully")
+
+name = input("Enter Name: ")
+age = input("Enter Age : ")
+patient_info = {"name": name,
+                "age": age}
+
+patient1 = Patients(**patient_info)
+
+insert(patient1)
+
+
