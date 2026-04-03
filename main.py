@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Path, HTTPException
 import json
-from pydantic import BaseModel
+from pydantic_app import BaseModel
 
 
 app = FastAPI()
@@ -42,13 +42,10 @@ def insert(patient: Patients):
     print(patient.age)
     print("Inserted Successfully")
 
-name = input("Enter Name: ")
-age = input("Enter Age : ")
-patient_info = {"name": name,
-                "age": age}
+
+patient_info = {"name": "Monirul",
+                "age": 25}
 
 patient1 = Patients(**patient_info)
-
-insert(patient1)
 
 
