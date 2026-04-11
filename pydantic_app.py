@@ -17,7 +17,6 @@ def insert(patient: Patients):
 
 patient_info = {"name": "Monirul",
                 "age": 25,
-                "married": False,
                 "contact":{
                     "Phone": "01742958888",
                     "Email": "monirul.cr3@gmail.com"
